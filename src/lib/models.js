@@ -25,6 +25,10 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    authProvider: {
+      type: String,
+      default: "next-auth",
+    },
   },
   { timestamps: true }
 );

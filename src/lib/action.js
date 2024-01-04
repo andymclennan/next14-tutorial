@@ -120,6 +120,7 @@ export const register = async (previousState, formData) => {
       email,
       password: hashedPassword,
       img,
+      authProvider: "next-auth",
     });
 
     await newUser.save();

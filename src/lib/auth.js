@@ -62,6 +62,7 @@ export const {
               username: profile.login,
               email: profile.email,
               image: profile.avatar_url,
+              authProvider: account.provider,
             });
 
             await newUser.save();
