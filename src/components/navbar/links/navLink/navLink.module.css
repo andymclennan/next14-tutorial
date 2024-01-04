@@ -10,3 +10,7 @@
   background-color: var(--text);
   color: var(--bg);
 }
+
+.linkHover:hover {
+  color: red;
+}

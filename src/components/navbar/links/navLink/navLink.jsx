@@ -10,9 +10,10 @@ const NavLink = ({ item }) => {
   return (
     <Link
       href={item.path}
-      className={`${styles.container} ${
+      className={`${styles.container} ${styles.linkHover} ${
         pathName === item.path && styles.active
-      }`}
+      }
+      `}
     >
       {item.title}
     </Link>
