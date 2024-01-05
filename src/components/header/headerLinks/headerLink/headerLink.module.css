@@ -14,3 +14,7 @@
 .linkHover:hover {
   color: red;
 }
+
+.logout {
+  border: 2px solid white;
+}

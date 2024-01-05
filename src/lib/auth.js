@@ -9,7 +9,6 @@ import LinkedInProvider from "next-auth/providers/linkedin";
 //import EmailProvider from "next-auth/providers/email"
 //import FacebookProvider from "next-auth/providers/facebook";
 
-
 import { connectToDb } from "./utils";
 import { User } from "./models";
 import bcrypt from "bcryptjs";

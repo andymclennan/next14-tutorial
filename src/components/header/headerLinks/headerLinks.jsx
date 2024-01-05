@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./links.module.css";
-import NavLink from "./navLink/navLink";
+import styles from "./headerLinks.module.css";
+import HeaderLink from "./headerLink/headerLink";
 import Image from "next/image";
 import { handleLogout } from "@/lib/action";
 
@@ -33,22 +33,22 @@ const Links = ({session}) => {
       <div className={styles.links}>
         
         {session?.user ? (
-          <NavLink item={{ title: "Dashboard", path: "/dashboard" }} />
+          <HeaderLink item={{ title: "Dashboard", path: "/dashboard" }} />
          ) : (
-          <NavLink item={{ title: "Homepage", path: "/" }} />
+          <HeaderLink item={{ title: "Homepage", path: "/" }} />
         )}
         {links.map((link) => (
-          <NavLink item={link} key={link.title} />
+          <HeaderLink item={link} key={link.title} />
         ))}
         {session?.user ? (
           <>
-            {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+            {session.user?.isAdmin && <HeaderLink item={{ title: "Admin", path: "/admin" }} />}
             <form action={handleLogout}>
-              <button className={`${styles.logout} ${styles.linkHover}`}>Logout</button>
+              <HeaderLink item={{ title: "Logout", path: "/logout" }} />
             </form>
           </>
         ) : (
-          <NavLink item={{ title: "Login", path: "/login" }} />
+          <HeaderLink item={{ title: "Login", path: "/login" }} />
         )}
       </div>
       <Image
@@ -62,7 +62,7 @@ const Links = ({session}) => {
       {open && (
         <div className={styles.mobileLinks}>
           {links.map((link) => (
-            <NavLink item={link} key={link.title} />
+            <HeaderLink item={link} key={link.title} />
           ))}
         </div>
       )}

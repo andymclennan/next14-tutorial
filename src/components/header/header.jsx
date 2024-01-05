@@ -1,9 +1,9 @@
 import Link from "next/link"
-import Links from "./links/Links"
-import styles from "./navbar.module.css"
+import Links from "./headerLinks/headerLinks"
+import styles from "./header.module.css"
 import { auth } from "@/lib/auth";
 
-const Navbar = async () => {
+const Header = async () => {
 
   const session = await auth();
 
@@ -17,4 +17,4 @@ const Navbar = async () => {
   )
 }
 
-export default Navbar
+export default Header
