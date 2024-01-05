@@ -29,6 +29,9 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "next-auth",
     },
+    authPayload: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
@@ -59,5 +62,6 @@ const postSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// MonngoDB Schemas
 export const User = mongoose.models?.User || mongoose.model("User", userSchema);
 export const Post = mongoose.models?.Post || mongoose.model("Post", postSchema);

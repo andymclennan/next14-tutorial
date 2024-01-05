@@ -85,16 +85,41 @@ export const deleteUser = async (formData) => {
   }
 };
 
+// GitHub Login
 export const handleGithubLogin = async () => {
   "use server";
   await signIn("github");
 };
 
-export const handleLogout = async () => {
+// Google Login
+export const handleLinkedInLogin = async () => {
   "use server";
-  await signOut();
+  await signIn("linkedin");
 };
 
+// Google Login
+export const handleGoogleLogin = async () => {
+  "use server";
+  await signIn("google");
+};
+
+// Credentials Login
+export const handleCredentialsLogin = async (prevState, formData) => {
+  const { username, password } = Object.fromEntries(formData);
+
+  try {
+    await signIn("credentials", { username, password });
+  } catch (err) {
+    console.log(err);
+
+    if (err.message.includes("CredentialsSignin")) {
+      return { error: "Invalid username or password" };
+    }
+    throw err;
+  }
+};
+
+// Credentials SignUp
 export const register = async (previousState, formData) => {
   const { username, email, password, img, passwordRepeat } =
     Object.fromEntries(formData);
@@ -133,17 +158,8 @@ export const register = async (previousState, formData) => {
   }
 };
 
-export const login = async (prevState, formData) => {
-  const { username, password } = Object.fromEntries(formData);
-
-  try {
-    await signIn("credentials", { username, password });
-  } catch (err) {
-    console.log(err);
-
-    if (err.message.includes("CredentialsSignin")) {
-      return { error: "Invalid username or password" };
-    }
-    throw err;
-  }
+// Logout
+export const handleLogout = async () => {
+  "use server";
+  await signOut();
 };
