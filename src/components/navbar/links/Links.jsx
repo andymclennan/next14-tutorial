@@ -8,10 +8,6 @@ import { handleLogout } from "@/lib/action";
 
 const links = [
   {
-    title: "Homepage",
-    path: "/",
-  },
-  {
     title: "About",
     path: "/about",
   },
@@ -35,6 +31,12 @@ const Links = ({session}) => {
   return (
     <div className={styles.container}>
       <div className={styles.links}>
+        
+        {session?.user ? (
+          <NavLink item={{ title: "Dashboard", path: "/dashboard" }} />
+         ) : (
+          <NavLink item={{ title: "Homepage", path: "/" }} />
+        )}
         {links.map((link) => (
           <NavLink item={link} key={link.title} />
         ))}

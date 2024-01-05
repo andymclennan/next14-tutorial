@@ -1,0 +1,10 @@
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.title{
+  font-size: 96px;
+}
