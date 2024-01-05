@@ -11,7 +11,8 @@
 }
 
 .title{
-  font-size: 96px;
+  font-size: 64px;
+  text-align: left;
 }
 
 .desc{
@@ -28,7 +29,7 @@
   min-width: 120px;
   cursor: pointer;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius-button);
 }
 
 .button:first-child{

@@ -4,11 +4,24 @@
     align-items: center;
     gap: 10px;
     margin: 5px 0px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
   }
   
-  .container:hover,
+  /* .container:hover, */
   .active {
-    background-color: #2e374a;
+    /* background-color: #2e374a; */
+    /* background-color: var(--text); */
+    background-color: var(--text);
+    color: var(--bg);
   }
-  
+
+  .container:hover,
+  .linkHover:hover {
+    /* background-color: var(--backgroundHover); */
+    color: var(--textHover);
+  }
+
+  /* .active{
+    background-color: var(--text);
+    color: var(--bg);
+  } */

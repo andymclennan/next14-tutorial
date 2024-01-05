@@ -20,7 +20,7 @@ import {
   MdPeople,
   MdOutlineSettings,
   MdHelpCenter,
-  // MdLogout,
+  MdLogout,
 } from "react-icons/md";
 
 // import { auth, signOut } from "@/app/auth";
@@ -124,12 +124,12 @@ const Sidebar = async () => {
         action={async () => {
           "use server";
           await signOut();
-        }}>
-          <button className={styles.logout}>
+        }}> */}
+          <button className={styles.logout}>  {/* Needs to be a button to handle Server Actions */}
             <MdLogout />
             Logout
           </button>
-        </form> */}
+        {/* </form> */}
       </div>
     );
   };

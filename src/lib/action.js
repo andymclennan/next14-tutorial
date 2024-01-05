@@ -162,4 +162,5 @@ export const register = async (previousState, formData) => {
 export const handleLogout = async () => {
   "use server";
   await signOut();
+  // return Response.redirect("/"); // Redirect to the home page
 };

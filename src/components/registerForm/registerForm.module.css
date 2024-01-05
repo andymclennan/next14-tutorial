@@ -20,5 +20,5 @@
   color: var(--textColor);
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius-button);
 }

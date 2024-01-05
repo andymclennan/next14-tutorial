@@ -5,7 +5,7 @@
 }
 
 .linkHover:hover {
-  color: red;
+    color: var(--textHover);
 }
 
 .menuButton,
@@ -36,4 +36,13 @@
     justify-content: center;
     gap: 10px;
   }
+}
+
+.logout {
+  min-width: 100px;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: 2px solid white;
+  background-color: var(--bg);
+  font-size: 15px;
 }

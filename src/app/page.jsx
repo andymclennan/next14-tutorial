@@ -5,21 +5,21 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>Creative Thoughts Agency.</h1>
+        <h1 className={styles.title}>Powered</h1>
+        <h1 className={styles.title}>By</h1>
+        <h1 className={styles.title}>Knowledge</h1>
         <p className={styles.desc}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
-          blanditiis adipisci minima reiciendis a autem assumenda dolore.
+        Join, share and learn.
         </p>
-        <div className={styles.buttons}>
-          <button className={styles.button}>Learn More</button>
-          <button className={styles.button}>Contact</button>
-        </div>
-        <div className={styles.brands}>
-          <Image src="/brands.png" alt="" fill className={styles.brandImg}/>
-        </div>
       </div>
       <div className={styles.imgContainer}>
-        <Image src="/hero.gif" alt="" fill className={styles.heroImg}/>
+        <Image
+          src="/pbk-logo.png"
+          width={500}
+          height={500}
+          alt="Powered by Knowledge Logo"
+          className={styles.heroImg}
+        />
       </div>
     </div>
   );

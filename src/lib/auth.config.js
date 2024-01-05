@@ -38,10 +38,8 @@ export const authConfig = {
       }
 
       // ONLY UNAUTHENTICATED USERS CAN REACH THE LOGIN PAGE
-
       if (isOnLoginPage && user) {
-        //return Response.redirect(new URL("/", request.nextUrl));
-        return Response.redirect(new URL("/"));
+          return Response.redirect(new URL("/dashboard", request.nextUrl));
       }
 
       return true

@@ -44,7 +44,7 @@ const Links = ({session}) => {
           <>
             {session.user?.isAdmin && <HeaderLink item={{ title: "Admin", path: "/admin" }} />}
             <form action={handleLogout}>
-              <HeaderLink item={{ title: "Logout", path: "/logout" }} />
+              <button className={`${styles.logout} ${styles.linkHover}`}>Logout</button>  {/* Needs to be a Button to handle Server Actions */}
             </form>
           </>
         ) : (

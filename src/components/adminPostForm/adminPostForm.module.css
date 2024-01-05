@@ -19,7 +19,7 @@
   cursor: pointer;
   background-color: var(--btn);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius-button);
   color: var(--textColor);
   font-weight: bold;
 }

@@ -19,6 +19,6 @@
   background-color: var(--btn);
   color: var(--textColor);
   font-weight: bold;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid #000000; /* Example: 2px solid black border */
+  border-radius: var(--border-radius-button);
 }

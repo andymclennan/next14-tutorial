@@ -47,13 +47,16 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     background: none;
     border: none;
-    color: white;
     width: 100%;
+    background-color: var(--backgroundHover);
   }
   
   .logout:hover{
-    background-color: #2e374a;
+    /* background-color: var(--backgroundHover); */
+    color: var(--textHover);
   }
+
+  
