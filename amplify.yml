@@ -6,6 +6,8 @@ frontend:
         - nvm install 20
         - npm install -g next
         - npm install react-icons
+        - npm install moment
+        - npm install use-debounce
     build:
       commands:
         - npm run build

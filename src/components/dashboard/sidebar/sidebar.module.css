@@ -21,6 +21,7 @@
   }
   
   .username{
+    color: var(--text);
     font-weight: 500;
   }
   
@@ -29,6 +30,11 @@
     color: var(--textSoft);
   }
   
+  .email{
+    font-size: 10px;
+    color: var(--textSoft);
+  }
+
   .list{
     list-style: none;
   }

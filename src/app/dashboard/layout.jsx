@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Sidebar from "@/components/dashboard/sidebar/sidebar";
 import Navbar from "@/components/dashboard/navbar/navbar";
 import styles from "@/components/dashboard/dashboard.module.css"
@@ -10,7 +11,9 @@ const Layout = ({ children }) => {
             </div>
             <div className={styles.content}>
                 <Navbar />
-                {children}
+                <Suspense fallback={<div>Loading...</div>}>
+                    {children}
+                </Suspense>
             </div>
         </div>
     )

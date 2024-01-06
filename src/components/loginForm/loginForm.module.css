@@ -13,12 +13,14 @@
   border-radius: 5px;
 }
 
-.form button{
+.form button {
+  width: 100%;
   padding: 20px;
-  cursor: pointer;
-  background-color: var(--btn);
+  background-color: teal;
   color: var(--textColor);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
   font-weight: bold;
-  border: 2px solid #000000; /* Example: 2px solid black border */
-  border-radius: var(--border-radius-button);
+  /* border: 1px solid #000000; Example: 2px solid black border */
 }

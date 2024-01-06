@@ -1,11 +1,3 @@
-// const Navbar = () => {
-//     return (
-//         <div>Navbar</div>
-//     )
-// }
-
-// export default Navbar
-
 import Image from "next/image";
 import MenuLink from "./menuLink/menuLink";
 import styles from "./sidebar.module.css";
@@ -24,7 +16,7 @@ import {
 } from "react-icons/md";
 
 // import { auth, signOut } from "@/app/auth";
-// import { auth, signOut } from "@/lib/auth";
+import { auth, signOut } from "@/lib/auth";
 
 const menuItems = [
   {
@@ -91,8 +83,9 @@ const menuItems = [
 
 
 const Sidebar = async () => {
-    //const { user } = await auth();
-    const user = {}
+    const { user } = await auth();
+
+    console.log(user);
 
     return (
       <div className={styles.container}>
@@ -105,9 +98,8 @@ const Sidebar = async () => {
             height="50"
           />
           <div className={styles.userDetail}>
-            {/*<span className={styles.username}>{user.username}</span>*/}
-            <span className={styles.username}>John Doe</span>
-            <span className={styles.userTitle}>Administrator</span>
+            <span className={styles.username}>{user?.username || user.email}</span>
+            <span className={styles.email}>{user.email}</span>
           </div>
         </div>
         <ul className={styles.list}>
@@ -120,16 +112,16 @@ const Sidebar = async () => {
             </li>
           ))}
         </ul>
-        {/* <form
+        <form
         action={async () => {
           "use server";
           await signOut();
-        }}> */}
+        }}>
           <button className={styles.logout}>  {/* Needs to be a button to handle Server Actions */}
             <MdLogout />
             Logout
           </button>
-        {/* </form> */}
+        </form>
       </div>
     );
   };

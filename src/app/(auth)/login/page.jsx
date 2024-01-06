@@ -7,6 +7,7 @@ const LoginPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
+        <h1>Login</h1>
         <form action={handleGithubLogin}>
           <button className={styles.github}>Login with Github</button>
         </form>
@@ -16,6 +17,7 @@ const LoginPage = () => {
         <form action={handleGoogleLogin}>
           <button className={styles.google}>Login with Google</button>
         </form> */}
+        <line>-----</line>
         <LoginForm />
       </div>
     </div>
